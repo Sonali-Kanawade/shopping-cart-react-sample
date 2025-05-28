@@ -1,38 +1,113 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 400px;
+  margin: 0 auto;
+}
+
+nav {
+  padding: 15px 8px;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0px 3px 3px #ccc;
+  margin-bottom: 10px;
+}
+
+.products {
+  background-color: #eee;
+  margin-top: 20px;
+  height: 250px;
+}
+
+.product-info {
+  padding:10px;
+  background-color: #fff;
+  margin: 10px;
+}
+
+.home {
+  margin-top: 20px;
+  height: 250px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size:28px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card {
+  box-shadow: 2px 3px 2px 1px #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  border: solid 1px #eee;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.green {
+  background-color: #7EBD4F;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pink {
+  background-color: #ed639e;
+  color: white
+}
+
+.purple {
+  background-color: #4535aa;
+  color: white
+}
+
+.flex-apart {
   display: flex;
-  flex-direction: column;
+  justify-content:space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+  text-decoration: none;
+  background-color: #7EBD4F;
+  color: #eee;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav > span > a {
+  text-decoration: none;
+  background-color: #4535aa;
+  color: #eee;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+input {
+  padding:8px;
+  border: solid 2px #bbb;
+  border-radius: 5px;
+  flex: 1;
+}
+
+label {
+  margin: 0 5px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content:center;
 }
