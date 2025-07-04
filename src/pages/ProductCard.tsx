@@ -1,4 +1,3 @@
-import { useOutletContext } from "react-router-dom";
 import { Product } from "../types";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,10 +7,8 @@ import { RootState } from "../store/store";
 const ProductCard = (props: { product: Product; }) => {
     const dispatch = useDispatch();
     const cart = useSelector((state: RootState) => state.cart.items);
-    // const context = useOutletContext();
 console.log(cart)
     const addToCartData = (val: Product) => {
-        // context.setCart([...context.cart, val])
         dispatch(addToCart({...val, quantity: 1}))        
     }
 

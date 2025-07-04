@@ -1,22 +1,19 @@
-import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
-import { Product, User } from "../types";
 import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
 
 export default function Root() {
-    const [user, setUser] = useState<User | null>(null);
-    // const [cart, setCart] = useState<Product[]>([]);
+    // const [user, setUser] = useState<User | null>(null);
 
     const cart = useSelector((state: RootState) => state.cart.items)
 
-    const loginUser = () => {
-        setUser({id:1, username:"abhishek", role:["user"]})
-    }
+    // const loginUser = () => {
+    //     setUser({id:1, username:"abhishek", role:["user"]})
+    // }
 
-    const logoutUser = () => {
-        setUser(null)
-    }
+    // const logoutUser = () => {
+    //     setUser(null)
+    // }
 
     return (
         <div style={{width:'400px'}}>
@@ -31,7 +28,6 @@ export default function Root() {
                 <Link to="/products/gadget">Gadget</Link>
                 <Link to="/products/tshirt">Tshirt</Link>
             </div>
-            {/* // user, loginUser, logoutUser, */}
             <Outlet context={{}} />
         </div>
     )

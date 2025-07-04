@@ -1,5 +1,5 @@
-import { JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useEffect, useState } from "react";
-import { useNavigate, useOutletContext, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { Product } from "../types";
 import ProductCard from "./ProductCard";
 
@@ -36,6 +36,7 @@ const Products = () => {
         <div>
             {
                 (productData) ?
+                // eslint-disable-next-line array-callback-return
                 productData.map((val: Product) => {
                     if(params.category === val.type) {
                         return (
