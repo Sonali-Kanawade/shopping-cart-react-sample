@@ -28,7 +28,7 @@ const Products = () => {
         <div className='products card'>
         <div>
             <select onChange={applyFilter}>
-                <option>Price filter:</option>
+                <option>Price:</option>
                 <option value="high-to-low">High to Low</option>
                 <option value="low-to-high">Low to High</option>
             </select>
